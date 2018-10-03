@@ -81,7 +81,7 @@ class RLExp():
         self.main_model = q_network(input_size=self.observation_shape, out_size= self.num_actions).to(self.device)
         self.target_model = q_network(input_size=self.observation_shape, out_size= self.num_actions).to(self.device)
         with torch.no_grad():
-            random_input = torch.rand(2, self.observation_shape)
+            random_input = torch.rand(2, self.observation_shape).to(self.device).float()
             self.main_model.forward(random_input, bsize=2)
             self.target_model.forward(random_input, bsize=2)
 
