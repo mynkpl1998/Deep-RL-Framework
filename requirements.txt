@@ -1,3 +1,6 @@
-torch==0.4.1
 pandas==0.23.4
+dash==0.28.1
 numpy==1.14.5
+dash_html_components==0.13.2
+plotly==3.3.0
+dash_core_components==0.30.2
