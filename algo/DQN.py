@@ -94,7 +94,7 @@ class DQN():
 
         # calculate current estimate
         Q_s = self.main_model.forward(current_states_torch, bsize=self.params["batch_size"])
-        Q_s_a = Q_s.gather(dim=1, index= actions_torch.unsqueeze(dim=1)).squeeze(dim=1)
+        Q_s_a = Q_s.gather(dim=1, index=actions_torch.unsqueeze(dim=1)).squeeze(dim=1)
 
         # make previus grad zero
         self.optimizer.zero_grad()

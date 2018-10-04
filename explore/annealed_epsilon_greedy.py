@@ -33,7 +33,7 @@ class annealed_ep_greedy():
     def setHyperParams(self,initial_epsilon,final_epsilon,episodes_to_anneal):
         self.params["intital_epsilon"] = float(initial_epsilon)
         self.params["final_epsilon"] = float(final_epsilon)
-        self.params["episodes_to_anneal"] = float(episodes_to_anneal)
+        self.params["episodes_to_anneal"] = int(episodes_to_anneal)
         self.params["current_epsilon"] = float(initial_epsilon)
 
     def exploreAction(self,state,curr_epsiode):

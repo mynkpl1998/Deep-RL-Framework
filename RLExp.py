@@ -1,4 +1,5 @@
 from algo.DQN import DQN
+from algo.DDQN import DDQN
 from explore.epsilon_greedy import ep_greedy
 from explore.annealed_epsilon_greedy import annealed_ep_greedy
 from memory.uniform_sampler import uniform_sampling
@@ -62,7 +63,7 @@ class RLExp():
         if self.algorithm == "DQN":
             self.algorithm_object = DQN()
         elif self.algorithm == "DDQN":
-            self.algorithm_object = None
+            self.algorithm_object = DDQN()
 
         # initialize exploration policy class
         if self.explore_policy == "epsilon-greedy":
